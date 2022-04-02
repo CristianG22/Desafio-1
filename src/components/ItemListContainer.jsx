@@ -1,12 +1,15 @@
 import React from "react"
+import ItemCount from "./ItemCount";
 
 export default function ItemListContainer() {
 
+    function onAdd (cantidad) {
+        alert(cantidad);
+    }
+
     return (
         <>
-
-            <h2> Item List Container aqui</h2>
-
+            <ItemCount initial= {1} stock= {20}  onAdd={onAdd}  />
         </>
     )
 }

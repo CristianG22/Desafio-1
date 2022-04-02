@@ -1,0 +1,13 @@
+.AgregCarrito {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    height: 14rem;
+    justify-content: space-between;
+}
+
+.AgregCarrito__Buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

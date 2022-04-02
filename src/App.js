@@ -1,6 +1,6 @@
 import React from "react";
 import ItemListContainer from "./components/ItemListContainer";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/NavBar/NavBar";
 
 
 export default function App() {
@@ -9,7 +9,7 @@ export default function App() {
     <>
     <NavBar/>
     <br/>
-    <h1> Bienvenidos a Guitar Gods</h1>
+    <h1 style={{textAlign : "center"}}> Bienvenidos a Guitar Gods</h1>
     <br/>
     <ItemListContainer/>
     </>
