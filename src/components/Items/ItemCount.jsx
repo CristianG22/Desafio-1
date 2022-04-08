@@ -4,7 +4,7 @@ import RemoveIcon from '@mui/icons-material/Remove';
 import Button from '@mui/material/Button';
 import "./ItemCount.css";
 
-export default function ItemCount({ initial, stock, onAdd }) {
+export default function ItemCount({ initial, stock}) {
 
     let [cant, setCant] = useState(initial);
 
@@ -24,7 +24,7 @@ export default function ItemCount({ initial, stock, onAdd }) {
 
         if (stock > 0)
             setCant(initial);
-            onAdd(cant);
+            alert(cant);
     }
 
     return (
