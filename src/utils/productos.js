@@ -1,4 +1,4 @@
-const productos = [
+export const productos = [
     {
         id: 1,
         nombre: "Les Paul",
@@ -13,4 +13,13 @@ const productos = [
     }
 ]
 
-export default productos;
+export const producto = [
+{
+    id: 1,
+    nombre: "Gibson",
+    precio: "$3000",
+    imagen: "https://cdn.shopify.com/s/files/1/0592/2973/3018/products/20132041-2_360x.jpg?v=1645032720"
+
+}
+
+]
