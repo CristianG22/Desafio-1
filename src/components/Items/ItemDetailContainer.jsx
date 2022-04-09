@@ -9,7 +9,7 @@ export default function ItemDetailContainer() {
 
     useEffect(() => {
 
-        customPromise(4000 , producto)
+        customPromise(2000 , producto)
             .then(result => setProd(result))
             .catch(error => console.log(error))
 

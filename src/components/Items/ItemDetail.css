@@ -1,0 +1,23 @@
+.gridProducto {
+
+    width: 50rem;
+    margin: auto;
+    display: grid;
+    grid-template-areas:    "image info1"
+                            "image info2"
+                            "image info2";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 25% 25%;
+    align-items: start;
+    justify-items: start;
+    justify-content: space-between;
+    align-content: space-between ;
+
+
+}
+
+.imagenProd {
+    grid-area: image;
+    border: 2px black solid;
+    border-radius: 2rem;
+}

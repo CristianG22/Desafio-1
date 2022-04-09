@@ -13,13 +13,13 @@ export const productos = [
     }
 ]
 
-export const producto = [
+export const producto = 
 {
     id: 1,
     nombre: "Gibson",
     precio: "$3000",
+    descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur qui repellendus voluptatibus consequatur. Omnis, quis?",
     imagen: "https://cdn.shopify.com/s/files/1/0592/2973/3018/products/20132041-2_360x.jpg?v=1645032720"
 
 }
 
-]
