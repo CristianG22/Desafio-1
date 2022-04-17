@@ -1,23 +1,35 @@
-import React from 'react'
-import ItemCount from './ItemCount'
+import React, { useState } from 'react'
 import "./ItemDetail.css"
+import ItemCount from './ItemCount'
+import { Link } from 'react-router-dom';
 
-const ItemDetail =  ({producto}) => {
+export default function ItemDetail  ({ producto }){
 
 
+    let [agregado, setagregado] = useState(0);
+
+    const onAdd = (quantityToAdd) => {
+
+        setagregado(quantityToAdd);
+
+    }
 
     return (
         <>
 
-        <div className='gridProducto'>
-            <h1  style={{gridArea : "info1"} }>{producto.nombre}</h1>
-            <p style={{gridArea : "info1 " , alignSelf : "center"}} >{producto.descripcion}</p>
-            <h1  style={{gridArea : "info1 " , alignSelf : "end" , justifySelf : "center"}}>{producto.precio}</h1>
-            <img src={producto.imagen}  alt={producto.nombre} className='imagenProd' />
-        </div>
-        
+            <div className='gridProducto'>
+                <h1 className='nameProd' >{producto.name}</h1>
+                <h1 className='precioProd'>{producto.price}</h1>
+                <h3>{producto.info}</h3>
+                <img src={producto.image} alt={producto.name} className='imagenProd' />
+
+                {
+                    agregado === 0 ? <ItemCount initial={0} stock={20} onAdd={onAdd} /> : <Link className='linkCart' to='/cart'> Ir a carrito </Link>
+
+                }
+
+            </div>
         </>
     )
 }
 
-export default ItemDetail

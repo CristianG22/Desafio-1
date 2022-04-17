@@ -1,17 +1,24 @@
-let conditionOk = true;
 
-const customPromise = (time,task) => {
-    return new Promise((resolve,reject) =>{
+export const customPromiseFilter = (time, task, categoryId) => {
+    return new Promise((resolve, reject) => {
 
+        const productsFilter = task.filter((productF) => productF.category === categoryId);
         setTimeout(() => {
-            if (conditionOk) {
-                resolve(task);
-            } else {
-                reject ('Error');
-            }
+            categoryId ? resolve(productsFilter) : resolve(task)
 
-        },time)
+
+        }, time)
+    })
+};
+
+export const customPromiseFind = (time, task, detailId) => {
+    return new Promise((resolve, reject) => {
+
+        const productFind = task.find((productC) => productC.id === Number(detailId));
+        setTimeout(() => {
+
+            resolve(productFind)
+
+        }, time)
     })
 }
-
-export default customPromise;

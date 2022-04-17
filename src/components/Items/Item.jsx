@@ -1,36 +1,21 @@
 import React from 'react'
-import ItemCount from './ItemCount'
-
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
+import { Link } from 'react-router-dom'
+import "./Item.css"
 
 export default function Item({ id, nombre, precio, imagen }) {
 
+    console.log(id);
 
     return (
         <>
+            <div className="cardItem" >
+                <img src={imagen} alt={nombre} className="imgCard" />
+                <p style={{ textAlign: "center", fontSize: "1.5rem" }}>{nombre}</p>
+                <p style={{ textAlign: "center", }}>{precio}</p>
+                <Link to={`/detail/${id}`} className="linkCard">Ver detalle</Link>
+            </div>
 
-            <Card key={id} sx={{ maxWidth: 500 }}>
-                <CardMedia
-                    component="img"
-                    height="300"
-                    image={imagen}
-                    alt="green iguana"
-                />
-                <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                        {nombre}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                        {precio}
-                    </Typography>
-                </CardContent>
-                <ItemCount initial={1} stock={20} />
-            </Card>
 
-            <br/>
         </>
     )
 }

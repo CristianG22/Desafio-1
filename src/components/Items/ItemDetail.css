@@ -1,17 +1,14 @@
 .gridProducto {
-
-    width: 50rem;
+    padding-top: 3rem;
+    width: 90%;
     margin: auto;
     display: grid;
     grid-template-areas:    "image info1"
                             "image info2"
-                            "image info2";
+                            "image info3";
     grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 25% 25%;
-    align-items: start;
-    justify-items: start;
-    justify-content: space-between;
-    align-content: space-between ;
+    grid-template-rows: 25% 50%;
+
 
 
 }
@@ -20,4 +17,19 @@
     grid-area: image;
     border: 2px black solid;
     border-radius: 2rem;
+}
+
+.precioProd {
+    text-align: center;
+    grid-area: info3;
+}
+
+.nameProd{
+    grid-area: info1;
+    text-align: center;
+}
+
+.linkCart {
+    font-size: 2rem;
+    grid-area: info3;
 }

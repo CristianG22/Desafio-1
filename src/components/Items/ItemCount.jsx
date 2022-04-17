@@ -1,10 +1,7 @@
 import React, { useState } from "react";
-import AddIcon from '@mui/icons-material/Add';
-import RemoveIcon from '@mui/icons-material/Remove';
-import Button from '@mui/material/Button';
 import "./ItemCount.css";
 
-export default function ItemCount({ initial, stock}) {
+export default function ItemCount({ initial, stock, onAdd}) {
 
     let [cant, setCant] = useState(initial);
 
@@ -19,26 +16,21 @@ export default function ItemCount({ initial, stock}) {
         if (cant > initial)
             setCant(--cant);
     }
-
-    const agregar = () => {
-
-        if (stock > 0)
-            setCant(initial);
-            alert(cant);
+    
+    const handleClick = () => {
+        onAdd(cant);
     }
 
     return (
         <>
             <div className="AgregCarrito">
-                <h1 style={{textAlign : "center"}}>Item Count</h1>
-
                 <div className="AgregCarrito__Buttons">
-                <Button variant="contained" color="error" onClick={resta}> <RemoveIcon /> </Button>
-                <Button>{cant}</Button>
-                <Button variant="contained" color="success" onClick={suma}> <AddIcon /> </Button>
+                <button onClick={resta}>-</button>
+                <button>{cant}</button>
+                <button onClick={suma}>+</button>
                 
                 </div>
-                <Button variant="contained" onClick={agregar}> Agregar al carrito </Button>
+                <button className="AgregCarrito__BAgreg" onClick={handleClick}> Agregar al carrito </button>
             </div>
         </>
     )

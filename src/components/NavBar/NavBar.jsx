@@ -2,6 +2,7 @@ import React from "react";
 import "./NavBar.css";
 import logo from "../../images/logo.png";
 import CartWidget from "./CartWidget";
+import { Link } from "react-router-dom";
 
 
 export default function NavBar() {
@@ -9,14 +10,12 @@ export default function NavBar() {
     <>
 
       <div className="navbar-parts">
-        <img src={logo} alt="" className="logo-navbar" />
+        <Link to='/'>  <img src={logo} alt="" className="logo-navbar" /> </Link>
         <ul className="flex-menu">
-          <li> <a href="#Inicio"> Inicio </a></li>
-          <li> <a href="#Electricas"> Eléctricas </a></li>
-          <li> <a href="#Acusticas"> Acústicas </a></li>
-          <li> <a href="#Accesorios"> Accesorios </a></li>
-          <li> <a href="#Nosotros"> Nosotros </a></li>
-          <li> <CartWidget/> </li>
+          <Link to='/'>Inicio</Link>
+          <Link to='/category/electricas'>Eléctricas</Link>
+          <Link to='/category/acusticas'>Acústicas</Link>
+          <li> <CartWidget /> </li>
         </ul>
       </div>
 

@@ -1,0 +1,33 @@
+
+.ItemListWrapper{
+    width: 92%;
+    min-height: calc(100vh - 76px - 60px - .2rem); /* container height= 100vh-navHeight-tabsHeight-margins */
+    margin: auto;
+    max-width: 2000px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center; }
+
+
+.ItemList{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2rem;
+    align-self: start;
+}
+
+.ItemList__products {
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    gap: 1.4rem;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
