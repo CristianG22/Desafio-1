@@ -3,7 +3,6 @@ import Item from "./Item";
 import "./ItemList.css"
 
 export default function ItemList({ productos }) {
-
     return (
 
         <div className="ItemListWrapper">
@@ -21,9 +20,6 @@ export default function ItemList({ productos }) {
             </div>
 
         </div>
-
-
-
 
     )
 }

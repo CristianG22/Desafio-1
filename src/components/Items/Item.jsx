@@ -4,7 +4,6 @@ import "./Item.css"
 
 export default function Item({ id, nombre, precio, imagen }) {
 
-    console.log(id);
 
     return (
         <>

@@ -21,7 +21,7 @@ export default function ItemDetailContainer() {
     return (
 
         <>
-            <ItemDetail producto={prod} />
+            <ItemDetail productSpecific={prod} />
         </>
     )
 }

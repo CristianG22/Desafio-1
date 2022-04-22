@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "./ItemCount.css";
 
-export default function ItemCount({ initial, stock, onAdd}) {
+
+export default function ItemCount({ initial, stock, onAdd }) {
+
 
     let [cant, setCant] = useState(initial);
 
@@ -16,7 +18,7 @@ export default function ItemCount({ initial, stock, onAdd}) {
         if (cant > initial)
             setCant(--cant);
     }
-    
+
     const handleClick = () => {
         onAdd(cant);
     }
@@ -25,10 +27,10 @@ export default function ItemCount({ initial, stock, onAdd}) {
         <>
             <div className="AgregCarrito">
                 <div className="AgregCarrito__Buttons">
-                <button onClick={resta}>-</button>
-                <button>{cant}</button>
-                <button onClick={suma}>+</button>
-                
+                    <button onClick={resta}>-</button>
+                    <button>{cant}</button>
+                    <button onClick={suma}>+</button>
+
                 </div>
                 <button className="AgregCarrito__BAgreg" onClick={handleClick}> Agregar al carrito </button>
             </div>

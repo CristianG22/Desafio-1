@@ -11,7 +11,6 @@ export default function ItemListContainer() {
 
     const {categoryId} = useParams ();
 
-    console.log(categoryId);
 
     useEffect(() => {
 
