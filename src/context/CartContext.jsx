@@ -11,7 +11,7 @@ const CartContextProvider = ({ children }) => {
 
         isInCart(item.id);
 
-        stateAdd === true ? setCart([...cart, item]) : console.log("Articulo previamente agregado")
+        stateAdd === true && item.quantityToAdd > 0 ? setCart([...cart, item]) : console.log("Articulo previamente agregado o la cantidad seleccionada fue 0")
 
 
     }
