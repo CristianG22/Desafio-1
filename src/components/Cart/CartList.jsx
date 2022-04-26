@@ -4,9 +4,10 @@ import { CartContext } from "../../context/CartContext";
 
 export default function CartList() {
 
-    const { cart } = useContext(CartContext)
-
+    const { cart, cartPrice} = useContext(CartContext)
+    console.log(cartPrice);
     console.log(cart)
+
     return (
 
         <div>

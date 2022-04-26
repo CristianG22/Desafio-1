@@ -6,13 +6,30 @@ let stateAdd;
 const CartContextProvider = ({ children }) => {
 
     const [cart, setCart] = useState([]);
+    const [cartPrice, setCartPrice] = useState();
+    let priceCounter;
 
     const addItem = (item) => {
 
         isInCart(item.id);
 
-        stateAdd === true && item.quantityToAdd > 0 ? setCart([...cart, item]) : console.log("Articulo previamente agregado o la cantidad seleccionada fue 0")
+        if (stateAdd === true && item.quantityToAdd > 0) {
+            setCart([...cart, item]);
 
+            let cantidad = item.quantityToAdd;
+            console.log(item.price)
+            console.log(typeof(item.price)) ;
+            console.log(`esto es la cantidad ${cantidad}` )
+            let precio = Number(item.price);
+            console.log(typeof(precio))
+            console.log(precio)
+
+
+            setCartPrice(priceCounter);
+        }
+        else {
+            console.log("Articulo previamente agregado o la cantidad seleccionada fue 0")
+        }
 
     }
 
@@ -32,7 +49,7 @@ const CartContextProvider = ({ children }) => {
 
     return (
         <>
-            <CartContext.Provider value={{ cart, setCart, addItem, removeItem, clear }}>
+            <CartContext.Provider value={{ cart, setCart, addItem, removeItem, clear, cartPrice }}>
                 {children}
             </CartContext.Provider>
         </>

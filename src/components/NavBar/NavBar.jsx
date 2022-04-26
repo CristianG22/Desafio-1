@@ -15,7 +15,7 @@ export default function NavBar() {
           <Link to='/'>Inicio</Link>
           <Link to='/category/electricas'>Eléctricas</Link>
           <Link to='/category/acusticas'>Acústicas</Link>
-          <li> <CartWidget /> </li>
+          <CartWidget />
         </ul>
       </div>
 
