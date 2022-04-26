@@ -1,31 +1,26 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 
 export const CartContext = createContext();
 
-let stateAdd;
 const CartContextProvider = ({ children }) => {
 
+
     const [cart, setCart] = useState([]);
-    const [cartPrice, setCartPrice] = useState();
-    let priceCounter;
+    let stateAdd;
+    const [cartQuantity, setCartQuantity] = useState(0);
+    let quantity = 0;
+    const [priceTotal, setPriceTotal] = useState(0);
+    let money = 0;
+
 
     const addItem = (item) => {
 
         isInCart(item.id);
 
         if (stateAdd === true && item.quantityToAdd > 0) {
+
             setCart([...cart, item]);
 
-            let cantidad = item.quantityToAdd;
-            console.log(item.price)
-            console.log(typeof(item.price)) ;
-            console.log(`esto es la cantidad ${cantidad}` )
-            let precio = Number(item.price);
-            console.log(typeof(precio))
-            console.log(precio)
-
-
-            setCartPrice(priceCounter);
         }
         else {
             console.log("Articulo previamente agregado o la cantidad seleccionada fue 0")
@@ -34,9 +29,7 @@ const CartContextProvider = ({ children }) => {
     }
 
     const removeItem = (id) => {
-
         setCart(cart.filter((productSpec) => productSpec.id !== id))
-
     }
 
     const clear = () => {
@@ -47,9 +40,42 @@ const CartContextProvider = ({ children }) => {
         cart.find((productoF) => productoF.id === id) ? stateAdd = false : stateAdd = true;
     }
 
+    const calcQuantity = () => {
+        cart.forEach((item) => {
+            quantity += item.quantityToAdd;
+            
+            setCartQuantity(quantity);
+        })
+
+        if (quantity === 0)
+            setCartQuantity(0);
+    }
+
+    useEffect(() => {
+        calcQuantity();
+        calcTotal();
+    }, [cart])
+
+
+    const calcTotal = () => {
+        cart.forEach((item) => {
+
+            let itemPriceXQuant;
+
+            itemPriceXQuant = Number(item.price) * item.quantityToAdd;
+
+            money += itemPriceXQuant;
+
+            setPriceTotal(money);
+        })
+
+        if (money === 0)
+            setPriceTotal(0);
+    }
+
     return (
         <>
-            <CartContext.Provider value={{ cart, setCart, addItem, removeItem, clear, cartPrice }}>
+            <CartContext.Provider value={{ cart, setCart, addItem, removeItem, clear, cartQuantity, priceTotal }}>
                 {children}
             </CartContext.Provider>
         </>

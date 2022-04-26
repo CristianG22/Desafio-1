@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./NavBar.css";
 import logo from "../../images/logo.png";
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
+import { CartContext } from "../../context/CartContext";
 
 
 export default function NavBar() {
+
+  const { cartQuantity } = useContext(CartContext)
+
   return (
     <>
 
@@ -15,7 +19,10 @@ export default function NavBar() {
           <Link to='/'>Inicio</Link>
           <Link to='/category/electricas'>Eléctricas</Link>
           <Link to='/category/acusticas'>Acústicas</Link>
-          <CartWidget />
+          {
+            cartQuantity === 0 ? "" : <CartWidget quantity={cartQuantity} />
+          }
+
         </ul>
       </div>
 

@@ -4,7 +4,7 @@ import { CartContext } from "../../context/CartContext";
 
 export default function Cart ({id, nombre, precio, imagen, cantidad}) {
 
-    const {removeItem,clear} = useContext(CartContext);
+    const {removeItem} = useContext(CartContext);
 
     const handleEliminar = () => {
         removeItem(id);
@@ -19,7 +19,5 @@ export default function Cart ({id, nombre, precio, imagen, cantidad}) {
         <p>{cantidad}</p>
         <button onClick={handleEliminar} >Eliminar producto</button>
         </div>
-        <br/>
-        <button onClick={clear}>Terminar compra </button>
     </>)
 }
