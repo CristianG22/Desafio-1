@@ -1,21 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { customPromiseFind } from '../../utils/customPromises';
-import {products} from '../../utils/productos';
 import ItemDetail from './ItemDetail';
+import { doc, getDoc, getFirestore } from "firebase/firestore"
+
 
 export default function ItemDetailContainer() {
 
     const [prod, setProd] = useState({});
 
-    const {detailId} = useParams();
+    const { detailId } = useParams();
+
 
     useEffect(() => {
+        const db = getFirestore();
 
-        customPromiseFind(2000 , products, detailId )
-            .then(result => setProd(result))
-            .catch(error => console.log(error))
-            
+        const productSpecific = doc(db, 'products', detailId)
+        
+        getDoc(productSpecific).then((itemZ) => {
+            setProd({ id: itemZ.id, ...itemZ.data() });
+        })
     }, [detailId])
 
     return (
