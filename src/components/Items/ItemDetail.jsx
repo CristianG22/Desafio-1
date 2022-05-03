@@ -1,12 +1,12 @@
 import React, { useContext, useState } from 'react'
-import "./ItemDetail.css"
+import "./css/ItemDetail.css"
 import ItemCount from './ItemCount'
 import { Link } from 'react-router-dom';
-import { CartContext } from '../../context/CartContext';
+import { GlobalContext } from '../../context/GlobalContext';
 
 export default function ItemDetail({ productSpecific }) {
 
-    const {addItem} = useContext(CartContext);
+    const {addItem} = useContext(GlobalContext);
 
     let [agregado, setAgregado] = useState(0);
 

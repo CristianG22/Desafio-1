@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import { CartContext } from "../../context/CartContext";
+import { GlobalContext } from "../../context/GlobalContext";
 
 
 export default function Cart ({id, nombre, precio, imagen, cantidad}) {
 
-    const {removeItem} = useContext(CartContext);
+    const {removeItem} = useContext(GlobalContext);
 
     const handleEliminar = () => {
         removeItem(id);
@@ -15,7 +15,7 @@ export default function Cart ({id, nombre, precio, imagen, cantidad}) {
         <div>
         <img src={imagen} alt={nombre}  />
         <p>{precio}</p>
-        <p>{imagen}</p>
+        <p>{nombre}</p>
         <p>{cantidad}</p>
         <button onClick={handleEliminar} >Eliminar producto</button>
         </div>

@@ -1,8 +1,8 @@
 import React, { createContext, useEffect, useState } from "react";
 
-export const CartContext = createContext();
+export const GlobalContext = createContext();
 
-const CartContextProvider = ({ children }) => {
+const GlobalContextProvider = ({ children }) => {
 
 
     const [cart, setCart] = useState([]);
@@ -11,6 +11,7 @@ const CartContextProvider = ({ children }) => {
     let quantity = 0;
     const [priceTotal, setPriceTotal] = useState(0);
     let money = 0;
+    const [orderId, setOrderId] = useState('');
 
 
     const addItem = (item) => {
@@ -75,11 +76,11 @@ const CartContextProvider = ({ children }) => {
 
     return (
         <>
-            <CartContext.Provider value={{ cart, setCart, addItem, removeItem, clear, cartQuantity, priceTotal }}>
+            <GlobalContext.Provider value={{ cart, setCart, addItem, removeItem, clear, cartQuantity, priceTotal, setOrderId, orderId }}>
                 {children}
-            </CartContext.Provider>
+            </GlobalContext.Provider>
         </>
     );
 };
 
-export default CartContextProvider;
+export default GlobalContextProvider;

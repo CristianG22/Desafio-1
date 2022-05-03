@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./ItemCount.css";
+import "./css/ItemCount.css";
 
 
 export default function ItemCount({ initial, stock, onAdd }) {

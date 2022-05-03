@@ -3,12 +3,12 @@ import "./NavBar.css";
 import logo from "../../images/logo.png";
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
-import { CartContext } from "../../context/CartContext";
+import { GlobalContext } from "../../context/GlobalContext";
 
 
 export default function NavBar() {
 
-  const { cartQuantity } = useContext(CartContext)
+  const { cartQuantity } = useContext(GlobalContext)
 
   return (
     <>
