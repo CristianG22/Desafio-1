@@ -1,0 +1,40 @@
+
+.flexMenu li {
+    margin-right: 25rem;
+    list-style-type: none;
+}
+
+.flexMenu a:hover {
+    background: rgba(0,0,0,0.3);
+    color: white;
+}
+
+.flexMenu a {
+    font-size: 10rem;
+    text-decoration: none;
+    color: bisque;
+    padding: 15rem;
+    border-left: 1.5px solid bisque;
+}
+
+.flexMenu{
+    margin-bottom: 0rem;
+}
+
+.navbarLogo {
+    height: 35rem;
+    width: 50rem;
+    position: relative;
+    margin-left: 5rem;
+    margin: 5rem;
+}
+
+.navbarParts {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: rgb(0, 43, 83);
+}
+

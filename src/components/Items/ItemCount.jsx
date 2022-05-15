@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./css/ItemCount.css";
+import ic from "./css/ItemCount.module.css";
 
 
 export default function ItemCount({ initial, stock, onAdd }) {
@@ -25,14 +25,13 @@ export default function ItemCount({ initial, stock, onAdd }) {
 
     return (
         <>
-            <div className="AgregCarrito">
-                <div className="AgregCarrito__Buttons">
-                    <button onClick={resta}>-</button>
-                    <button>{cant}</button>
-                    <button onClick={suma}>+</button>
-
+            <div className={ic.AgregCarrito}>
+                <div className={ic.AgregCarrito__Buttons}>
+                    <p onClick={resta} className={ic.RestButton}>-</p>
+                    <p className={ic.QuantityItems}>{cant}</p>
+                    <p onClick={suma} className={ic.PlusButton}>+</p>
                 </div>
-                <button className="AgregCarrito__BAgreg" onClick={handleClick}> Agregar al carrito </button>
+                <button className={ic.AgregCarrito__BAgreg} onClick={handleClick}> Agregar al carrito </button>
             </div>
         </>
     )

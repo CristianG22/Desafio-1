@@ -1,20 +1,20 @@
 import React, { useContext, useState } from 'react'
-import "./css/ItemDetail.css"
+import itd from "./css/ItemDetail.module.css"
 import ItemCount from './ItemCount'
 import { Link } from 'react-router-dom';
 import { GlobalContext } from '../../context/GlobalContext';
 
 export default function ItemDetail({ productSpecific }) {
 
-    const {addItem} = useContext(GlobalContext);
+    const { addItem } = useContext(GlobalContext);
 
     let [agregado, setAgregado] = useState(0);
 
     const onAdd = (quantityToAdd) => {
 
         setAgregado(quantityToAdd);
-        addItem ({...productSpecific, quantityToAdd})
-        
+        addItem({ ...productSpecific, quantityToAdd })
+
     }
 
 
@@ -22,17 +22,17 @@ export default function ItemDetail({ productSpecific }) {
     return (
         <>
 
-            <div className='gridProducto'>
-                <h1 className='nameProd' >{productSpecific.name}</h1>
-                <h1 className='precioProd'>{productSpecific.price}</h1>
-                <h3>{productSpecific.info}</h3>
-                <img src={productSpecific.image} alt={productSpecific.name} className='imagenProd' />
+            <div className={itd.gridProducto}>
+                <h1 className={itd.nameProd} >{productSpecific.name}</h1>
+                <h1 className={itd.precioProd}>${productSpecific.price}</h1>
+                <h3 className={itd.infoProd}>{productSpecific.info}</h3>
+                <img src={productSpecific.image} alt={productSpecific.name} className={itd.imagenProd} />
 
                 {
-                    agregado === 0 ? <ItemCount initial={0} stock={20} onAdd={onAdd} /> : <Link className='linkCart' to='/cart'> Ir a carrito </Link>
-
+                    agregado === 0
+                        ? <ItemCount initial={0} stock={productSpecific.stock} onAdd={onAdd} />
+                        : <Link to='/cart' className={itd.LinkCart}> <button className={itd.ButtonLinkCart}> Ir a carrito </button> </Link>
                 }
-
             </div>
         </>
     )

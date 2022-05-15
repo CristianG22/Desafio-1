@@ -1,0 +1,66 @@
+.flexboxRU {
+    display: flex;
+    flex-direction: column;
+    height: 220rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tittleRU {
+    font-size: 15rem;
+    margin-top: 10rem;
+}
+
+.inpClass {
+    font-size: 8rem;
+    border-style: double;
+    border-radius: 5rem;
+    border-color: rgb(88, 19, 40);
+    padding: 2rem;
+    width: 150rem;
+}
+
+.labelRU {
+    font-size: 10rem;
+    color: rgb(38, 38, 38);
+}
+
+.buttonReset {
+    font-size: 8rem;
+    width: 72rem;
+    padding: 2.5rem;
+    border: rgb(38, 38, 38) solid 2px;
+    background-color: rgb(88, 19, 40);
+    color: white;
+    border-radius: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.buttonEnd {
+    font-size: 10rem;
+    width: 85rem;
+    padding: 3rem;
+    border: rgb(38, 38, 38) solid 2px;
+    background-color: rgb(3, 96, 172);
+    color: white;
+    border-radius: 3rem;
+}
+
+
+.boxInputs{
+    border: dashed 2px rgb(0,43,83);
+    border-radius: 10rem;
+    width: 58%;
+    height: 140rem;
+    display: flex;
+    flex-direction: column;
+    padding: 10rem;
+    justify-content: space-between;
+}
+
+.orderInputs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

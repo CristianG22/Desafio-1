@@ -1,0 +1,74 @@
+.tittleCheckoutP {
+    font-size: 12rem;
+    text-align: center;
+    display: inline-block;
+}
+
+.tittleCheckoutH1{
+    font-size: 11rem;
+    display: inline-block;
+    text-align: center;
+}
+
+.flexMessages{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flexButtons {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.buttonEndCheck{
+    font-size: 8rem;
+    width: 70rem;
+    padding: 2.5rem;
+    border: rgb(38, 38, 38) solid 2px;
+    background-color: rgb(3, 96, 172);
+    color: white;
+    border-radius: 3rem;
+}
+
+.buttonCancelCheck{
+    font-size: 8rem;
+    width: 70rem;
+    padding: 2.5rem;
+    border: rgb(38, 38, 38) solid 2px;
+    background-color: rgb(88, 19, 40);
+    color: white;
+    border-radius: 3rem;
+}
+
+.lineDataCheck {
+    margin-left: 10rem;
+
+}
+
+.dataCheck,.dataChl{
+    font-size: 10rem;
+}
+
+
+.flexboxItems{
+    margin: 10rem;
+}
+
+
+.messageCheck{
+    font-size: 18rem;
+    text-align: center;
+    margin: 10rem;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+.flexAll{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -1,0 +1,70 @@
+.AgregCarrito {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    grid-area: info3;
+    align-items: center;
+}
+
+.AgregCarrito__Buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: solid rgb(38, 38, 38) 2.8px;
+    border-radius: 4rem;
+    width: 70rem;
+}
+
+
+.RestButton {
+    border-right: solid 2px rgb(0, 25, 58);
+    margin-bottom: 0rem;
+    font-size: 8rem;
+    text-align: center;
+    padding: 5rem;
+    padding-right: 10rem;
+    padding-left: 10rem;
+    color: rgb(0, 25, 58);
+    background-color: rgb(232, 232, 232);
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    cursor: pointer;
+    width: 33%;
+}
+
+.PlusButton {
+    border-left: solid 2px rgb(0, 25, 58);
+    margin-bottom: 0rem;
+    font-size: 8rem;
+    text-align: center;
+    padding: 5rem;
+    padding-right: 10rem;
+    padding-left: 10rem;
+    background-color: white;
+    color: rgb(0, 25, 58);
+    background-color: rgb(232, 232, 232);
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    cursor: pointer;
+    width: 33%;
+}
+
+.QuantityItems {
+    margin-bottom: 0rem;
+    font-size: 8rem;
+    margin: 5rem;
+    background-color: white;
+    color: rgb(0, 25, 58);
+    text-align: center;
+}
+
+.AgregCarrito__BAgreg {
+    font-size: 6rem;
+    width: 60rem;
+    padding: 2.5rem;
+    border: rgb(38, 38, 38) solid 2px;
+    background-color: rgb(3, 96, 172);
+    color: white;
+    border-radius: 3rem;
+}

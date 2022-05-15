@@ -1,4 +1,10 @@
 
+.backgroundClass{
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/guitargodwebfb.appspot.com/o/fondoGuitarras.jpg?alt=media&token=284d937b-ad15-4e1f-ae17-f0934671169b");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .ItemListWrapper{
     width: 92%;
     min-height: calc(100vh - 76px - 60px - .2rem); /* container height= 100vh-navHeight-tabsHeight-margins */
@@ -7,7 +13,9 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+}
+
 
 
 .ItemList{
@@ -18,16 +26,17 @@
     width: 100%;
     margin-bottom: 2rem;
     align-self: start;
+
 }
 
 .ItemList__products {
     width: 100%;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
     display: grid;
     justify-content: center;
     align-content: center;
-    gap: 1.4rem;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 9.4rem;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 }
 

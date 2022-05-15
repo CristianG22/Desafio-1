@@ -1,17 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import "./css/Item.css"
+import it from "./css/Item.module.css"
 
 export default function Item({ id, nombre, precio, imagen }) {
 
 
     return (
         <>
-            <div className="cardItem" >
-                <img src={imagen} alt={nombre} className="imgCard" />
-                <p style={{ textAlign: "center", fontSize: "1.5rem" }}>{nombre}</p>
-                <p style={{ textAlign: "center", }}>{precio}</p>
-                <Link to={`/detail/${id}`} className="linkCard">Ver detalle</Link>
+            <div className={it.cardItem} >
+                <img src={imagen} alt={nombre} className={it.imgCard} />
+                <div className={it.SpaceInfo}>
+                    <p className={it.infoName}>{nombre}</p>
+                    <p className={it.InfoPrice}>${precio}</p>
+                    <button className={it.ButtonCard}> <Link to={`/detail/${id}`} className={it.LinkCard}>Ver detalle</Link> </button>
+                </div>
             </div>
 
 

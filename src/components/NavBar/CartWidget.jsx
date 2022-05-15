@@ -1,18 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaGuitar } from "react-icons/fa";
-import "./iconSVG.css";
-import { IconContext } from "react-icons";
+import isvg from "./css/IconSVG.module.css";
 
-export default function CartWidget({quantity}) {
+
+export default function CartWidget({ quantity }) {
     return (
         <>
-            <IconContext.Provider value={{ className: 'iconSVGBuy' }}>
+            <div className={isvg.divWidget}>
+                <Link to="/cart">
+                    <FaGuitar className={isvg.iconSVGBuy} />
+                    <p className={isvg.quantityIcon}>{quantity}</p>
+                </Link>
 
-                <Link to="/cart"><FaGuitar className="iconSVGBuy"/></Link>
-                <p>{quantity}</p>
-
-            </IconContext.Provider>
+            </div>
 
         </>
     );

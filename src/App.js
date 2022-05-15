@@ -6,8 +6,8 @@ import ItemListContainer from "./components/Items/ItemListContainer";
 import NavBar from "./components/NavBar/NavBar";
 import GlobalContextProvider from "./context/GlobalContext";
 import CartList from "./components/Cart/CartList";
-import RegisterUser from "./components/RegisterUser";
-import CheckoutList from "./components/CheckoutList";
+import RegisterUser from "./components/UserCheck/RegisterUser"
+import CheckoutList from "./components/UserCheck/CheckoutList";
 
 
 export default function App() {
