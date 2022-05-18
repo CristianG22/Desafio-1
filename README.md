@@ -4,7 +4,7 @@
 La presente página fue desarrollada con ReactJS y usa como base de datos a Firebase, el emprendimiento no es real por ende no se pueden realizar compras reales en la página.
 
 ## Instalación
-Como primer instancia debe clonar el repositorio, luego instalar la aplicación con "npm install" y para poder finalmente iniciarla instroduzca "npm start". Todos los comandos se realizan en su terminal dentro de la carpeta del proyecto.
+Como primer instancia debe clonar el repositorio, luego instalar la aplicación y las dependencias que necesita con "npm install", y para poder finalmente iniciarla introduzca "npm start". Todos los comandos se realizan en su terminal dentro de la carpeta del proyecto.
 
 ``` sh
  git clone https://github.com/CristianG22/GuitarGodWeb.git
