@@ -31,5 +31,8 @@ Como primer instancia debe clonar el repositorio, luego instalar la aplicación 
 - react-icons.
 - react-router-dom.
 
+## Demo
+![](demo.gif)
+
 ## Autor
 [Cristian Gramajo]
