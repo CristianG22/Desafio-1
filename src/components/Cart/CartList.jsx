@@ -8,7 +8,6 @@ export default function CartList() {
 
     const { cart, cartQuantity, priceTotal } = useContext(GlobalContext)
 
-    console.log(cart)
     return (
 
         <div className={cl.flexboxCL}>

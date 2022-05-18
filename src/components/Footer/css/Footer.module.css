@@ -1,0 +1,81 @@
+.iconW {
+    font-size: 16rem;
+    margin-left: 10rem;
+}
+
+.iconW:hover {
+    color: greenyellow;
+}
+
+.iconI {
+    font-size: 17rem;
+    margin-left: 10rem;
+}
+
+.iconI:hover{
+    color: deeppink;
+}
+
+.iconF {
+    font-size: 15rem;
+    margin-left: 13rem;
+}
+
+.iconF:hover {
+    color: blue;
+}
+
+.iconC {
+    font-size: 15rem;
+    margin-left: 4rem;
+}
+
+.tittleF{
+    font-size: 14rem;
+    color: white;
+}
+.pLittleF {
+    font-size: 10rem;
+    color: white;
+}
+
+.backgroundF {
+    height: 100%;
+
+    background-color: rgb(80, 80, 80);
+
+}
+
+.gridF {
+    display: grid;
+    grid-template-areas: " links times"
+        "social times";
+    grid-template-rows: 60rem 90rem;
+    grid-template-columns: 50% 50%;
+}
+
+.linksF {
+    grid-area: links;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.socialsF {
+    grid-area: social;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-bottom: 5rem;
+    margin-left: 30rem;
+}
+
+.timesF {
+    grid-area: times;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}

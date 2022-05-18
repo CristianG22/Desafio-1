@@ -6,6 +6,7 @@ export default function ItemList({ productos }) {
     return (
 
         <div className={il.backgroundClass}>
+            <h1 className={il.tittle}>Guitar Gods</h1>
             <div className={il.ItemListWrapper}>
                 <div className={il.ItemList}>
                     <div className={il.ItemList__products}>

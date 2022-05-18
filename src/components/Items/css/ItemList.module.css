@@ -40,3 +40,10 @@
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 }
 
+.tittle{
+    font-size: 30rem;
+    text-align: center;
+    color:  rgb(0, 43, 83);
+    padding-top: 10rem;
+}
+

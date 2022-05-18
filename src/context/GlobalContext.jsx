@@ -13,20 +13,18 @@ const GlobalContextProvider = ({ children }) => {
     let money = 0;
     const [orderId, setOrderId] = useState('');
 
+    const [buyerData, setBuyerData] = useState(0);
 
     const addItem = (item) => {
 
         isInCart(item.id);
 
         if (stateAdd === true && item.quantityToAdd > 0) {
-
             setCart([...cart, item]);
-
         }
         else {
             console.log("Articulo previamente agregado o la cantidad seleccionada fue 0")
         }
-
     }
 
     const removeItem = (id) => {
@@ -44,7 +42,7 @@ const GlobalContextProvider = ({ children }) => {
     const calcQuantity = () => {
         cart.forEach((item) => {
             quantity += item.quantityToAdd;
-            
+
             setCartQuantity(quantity);
         })
 
@@ -76,7 +74,10 @@ const GlobalContextProvider = ({ children }) => {
 
     return (
         <>
-            <GlobalContext.Provider value={{ cart, setCart, addItem, removeItem, clear, cartQuantity, priceTotal, setOrderId, orderId }}>
+            <GlobalContext.Provider value={{
+                cart, setCart, addItem, removeItem, clear, cartQuantity, priceTotal,
+                setOrderId, orderId, setBuyerData, buyerData
+            }}>
                 {children}
             </GlobalContext.Provider>
         </>

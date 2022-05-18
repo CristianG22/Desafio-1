@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 20rem;
+    padding-top: 20rem;
 }
 
 
@@ -78,4 +80,5 @@ tfoot {
     background-color: rgb(3, 96, 172);
     color: white;
     border-radius: 3rem;
+    margin-top: 10rem;
 }

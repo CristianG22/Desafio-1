@@ -8,6 +8,7 @@ import GlobalContextProvider from "./context/GlobalContext";
 import CartList from "./components/Cart/CartList";
 import RegisterUser from "./components/UserCheck/RegisterUser"
 import CheckoutList from "./components/UserCheck/CheckoutList";
+import Footer from "./components/Footer/Footer";
 
 
 export default function App() {
@@ -30,6 +31,7 @@ export default function App() {
 
             <Route exact path="/checkout" element={<CheckoutList/>}/>
           </Routes>
+          <Footer/>
 
         </BrowserRouter>
       </GlobalContextProvider>

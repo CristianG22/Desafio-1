@@ -71,4 +71,5 @@ tr:nth-child(even) {background-color: #f2f2f2;}
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 20rem;
 }

@@ -37,7 +37,6 @@ export default function ItemListContainer() {
 
     }, [categoryId])
 
-    console.log(items)
     return (
         <>
             <ItemList productos={items} />
