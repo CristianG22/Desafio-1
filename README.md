@@ -32,6 +32,8 @@ Como primer instancia debe clonar el repositorio, luego instalar la aplicación 
 - react-router-dom.
 
 ## Demo
+Video de muestra de la página, como se maneja la misma.
+
 ![](demo.gif)
 
 ## Autor
